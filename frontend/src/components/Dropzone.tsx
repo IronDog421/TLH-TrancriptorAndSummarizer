@@ -17,7 +17,10 @@ const Dropzone: React.FC<DropzoneProps> = ({ onFile }) => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: 'video/*,audio/*',
+    accept: {
+      'video/*': [],
+      'audio/*': [],
+    },
   });
 
   return (

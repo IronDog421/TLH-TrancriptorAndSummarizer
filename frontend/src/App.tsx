@@ -8,10 +8,10 @@ import Dropzone from './components/Dropzone';
 import Status from './components/Status';
 import Result from './components/Result';
 
-type Status = 'waiting' | 'uploading' | 'processing' | 'transcribing' | 'summarizing' | 'completed' | 'error';
+type ProcessStatus = 'waiting' | 'uploading' | 'processing' | 'transcribing' | 'summarizing' | 'completed' | 'error';
 
 function App() {
-  const [status, setStatus] = useState<Status>('waiting');
+  const [status, setStatus] = useState<ProcessStatus>('waiting');
   const [transcription, setTranscription] = useState('');
   const [summary, setSummary] = useState('');
   const [error, setError] = useState('');

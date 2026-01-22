@@ -5,3 +5,6 @@ openai-whisper
 transformers
 torch
 torchaudio
+bitsandbytes
+sentencepiece
+accelerate
