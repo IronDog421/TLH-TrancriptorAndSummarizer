@@ -23,7 +23,7 @@ app.add_middleware(
 
 # --- LLM CONFIGURATION ---
 # Using a powerful 14B parameter model with 4-bit quantization
-model_name = "Qwen/Qwen1.5-14B-Chat"
+model_name = "Qwen/Qwen1.5-14B-Chat" #"Qwen/Qwen3-4B-Thinking-2507" saca los tokens de thinking
 
 # 4-bit quantization configuration
 bnb_config = BitsAndBytesConfig(
@@ -47,7 +47,7 @@ llm_pipeline = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    max_new_tokens=1000,
+    max_new_tokens=10000,
     do_sample=True,
     temperature=0.7,
     top_p=0.95,
