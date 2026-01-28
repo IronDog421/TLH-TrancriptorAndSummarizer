@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone';
 
 interface DropzoneProps {
   onFile: (file: File) => void;
+  compact?: boolean;
 }
 
 const Dropzone: React.FC<DropzoneProps> = ({ onFile }) => {
